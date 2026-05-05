@@ -13,6 +13,7 @@ def _download_video_sync(url: str, output_dir: str) -> str:
         'noplaylist': True,
         'quiet': True,
         'no_warnings': True,
+        'extractor_args': {'youtube': ['player_client=ios,web']},
     }
     
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
